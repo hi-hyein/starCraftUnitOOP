@@ -1,4 +1,8 @@
-# Step01.도매인 구조
+# Step01.도메인 구조
+
+- star craft → main stage
+- commander → main stage의 주인공, 유닛에게 명령을 내림
+- unit → commander의 명령을 받아 일을 하는 병사
 
 # 협력
 
@@ -13,10 +17,6 @@
 1. 유닛은 커맨더의 이동명령에 따라 커맨더가 원하는 좌표로 이동할 수 있다.
 
 # 구현
-
-- star craft → main stage
-- commander → main stage의 주인공, 유닛에게 명령을 내림
-- unit → commander의 명령을 받아 일을 하는 병사
 - star craft 라는 main stage에서 명령을 내리는 commander 객체
 - commander가 명령을 내릴 unit 객체
 - commander와 unit의 종류 구현은 저그(commander)와 두마리의 라바,드론으로(unit) 축소
