@@ -74,5 +74,3 @@
 1. 유닛 이름
 2. 현재 좌표
 
-# 개념 구조 다이어그램
-[다이어그램 링크(작업 중)](https://drive.google.com/file/d/1SJmT87BOpjt212SsEdUoYup1SqPzIjWb/view?usp=sharing)
