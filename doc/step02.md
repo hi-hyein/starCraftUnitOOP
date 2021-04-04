@@ -1,7 +1,4 @@
 # Step02. 책임, 역할
-Commander 유닛 이동에 대한 설명만 먼저 추가
-Commander 멤버, 
----
 # Commander
 ## member
 ### 1. String 이름
