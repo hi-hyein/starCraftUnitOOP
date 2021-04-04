@@ -33,7 +33,7 @@ Commander 멤버,
 
 # Unit
 
-## field
+## Member
 
 Float 속도: 0.5f(예)
 
