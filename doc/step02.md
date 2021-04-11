@@ -54,8 +54,9 @@ Vector3 현재 좌표: 0 0 0(예)
 - transform.position = Vector3.MoveTowards(trnasform.position += Commander가 명령한 좌표 * 속도 * Time.deltaTime)
 - 현재 좌표 갱신(Commander가 명령한 좌표)
 # UML 다이어그램
-![클래스 다이어그램 스케치3](/doc/resource/class_diagram03.png)
+![클래스 다이어그램 스케치4](/doc/resource/class_diagram04.png)
 ### 클래스 다이어그램 스케치 과정
 - [클래스 다이어그램 스케치1](/class_diagram01.md)
 - [클래스 다이어그램 스케치2](/class_diagram02.md)
 - [클래스 다이어그램 스케치3](/class_diagram03.md)
+- [클래스 다이어그램 스케치4](/class_diagram04.md)
