@@ -1,25 +1,25 @@
 using System;
 using System.Collections.Generic;
 
-public abstract class Commander
+public class Commander
 {		
 	
-	public virtual void CreateUnit()
+	public void CreateUnit()
 	{
 		Console.WriteLine("유닛생성");
 	}
 	
-	public virtual void SelectUnit()
+	public void SelectUnit()
 	{
 		Console.WriteLine("유닛선택");
 	}
 	
-	public virtual void SetPosition()
+	public void SetPosition()
 	{
 		Console.WriteLine("유닛좌표선택");
 	}
 	
-	public virtual void MoveUnit()
+	public void MoveUnit()
 	{
 		Console.WriteLine("유닛이동");
 	}
