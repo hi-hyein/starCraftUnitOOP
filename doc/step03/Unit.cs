@@ -2,12 +2,12 @@ using System;
 
 public abstract class Unit
 {
-    public void Move()
-    {
-        Console.WriteLine("이동이동");
-    }
+    abstract void Move();
 }
 
 public class Drone : Unit
 {
+    public override void Move() {
+        Console.WriteLine("드론이 이동한다");
+	}
 }
