@@ -1,13 +1,11 @@
 # Step02. 책임, 역할
 # Commander
 ## Method
-### 1. 유닛 생성
-- 책임 : 저그 유닛 리스트와 내 유닛을 사용해서 유닛을 생성한다.
-### 2. 유닛 선택
+### 1. 유닛 선택
 - 책임 : 나의 유닛들을 원하는 수만큼 선택한다.
-### 3. 유닛 이동시킬 좌표 선택
+### 2. 유닛 이동시킬 좌표 선택
 - 책임 : 유닛을 이동시킬 좌표를 정보를 반환
-### 4. 유닛 이동 명령
+### 3. 유닛 이동 명령
 - 책임 : 유닛객체에 좌표를 전달하여 이동 명령
 - 유닛.이동(유닛 이동시킬 좌표); // 유닛 선택해야 되는건 여기서 생략
 
@@ -41,7 +39,9 @@
 - transform.position = Vector3.MoveTowards(trnasform.position += Commander가 명령한 좌표 * 속도 * Time.deltaTime)
 - 현재 좌표 갱신(Commander가 명령한 좌표)
 
-# Structure
+# Lavar : Unit
+# Drone : Unit
+# Building
 - 구조체
 - 생성시 미네랄 소모
 ## Hatchery
