@@ -34,7 +34,7 @@ public class Zerg : Commander {
 		this.myUnits = new List<Unit>();
 	}
 
-	public void 해처리생성()
+	public void CreateHatchery()
 	{
 		if(mineral < 300) {
 			Console.WriteLine("미네랄 부족, 생성 실패");
