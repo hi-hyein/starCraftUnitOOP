@@ -55,10 +55,11 @@
 - 가격 : 미네랄 50, 라바 -1
 
 # UML 다이어그램
-![클래스 다이어그램 스케치4](/doc/resource/class_diagram05.png)
+![클래스 다이어그램 스케치6](/doc/resource/class_diagram06.png)
 ### 클래스 다이어그램 스케치 과정
 - [클래스 다이어그램 스케치1](/class_diagram01.md)
 - [클래스 다이어그램 스케치2](/class_diagram02.md)
 - [클래스 다이어그램 스케치3](/class_diagram03.md)
 - [클래스 다이어그램 스케치4](/class_diagram04.md)
-- [클래스 다이어그램 스케치4](/class_diagram05.md)
+- [클래스 다이어그램 스케치5](/class_diagram05.md)
+- [클래스 다이어그램 스케치6](/class_diagram06.md)
