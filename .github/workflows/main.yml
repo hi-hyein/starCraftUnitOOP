@@ -1,11 +1,13 @@
 name: Actions 😎
 
-on: 
+on:
   push:
-    branches: [ master ]
+    branches:
+    - main
   pull_request:
-    branches: [ master ]
-
+    branches:
+    - main
+  
 jobs:
   build:
     name: Build my project ✨
@@ -18,10 +20,10 @@ jobs:
           lfs: true
 
       # Cache
-#       - uses: actions/cache@v2
-#         with:
-#           path: Library
-#           key: Library
+      # - uses: actions/cache@v2
+        # with:
+          # path: Library
+          # key: Library
 
       # Test
       - name: Run tests
@@ -32,15 +34,15 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
 
       # Build
-#       - name: Build project
-#         uses: game-ci/unity-builder@v2
-#         env:
-#           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-#         with:
-#           targetPlatform: WebGL
+      # - name: Build project
+        # uses: game-ci/unity-builder@v2
+        # env:
+          # UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        # with:
+          # targetPlatform: WebGL
 
       # Output
-#       - uses: actions/upload-artifact@v2
-#         with:
-#           name: Build
-#           path: build
+      # - uses: actions/upload-artifact@v2
+        # with:
+          # name: Build
+          # path: build
