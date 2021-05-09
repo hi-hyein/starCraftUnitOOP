@@ -23,7 +23,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ../../Library
-          key: Library
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
 
       # Test
       - name: Run tests
