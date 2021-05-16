@@ -10,6 +10,7 @@ on:
     
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  githubToken: ${{ secrets.GITHUB_TOKEN }}
   
 jobs:
   test:
@@ -31,7 +32,6 @@ jobs:
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         with:
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
           testMode: EditMode
 
       # Build
