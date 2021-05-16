@@ -19,7 +19,7 @@ namespace Tests
         public IEnumerator NewTestScriptWithEnumeratorPasses()
         {
             // Use the Assert class to test conditions.
-            Assert.AreEqual(3, NewTestScriptSimplePasses(2, 3));
+            Assert.AreEqual(5, NewTestScriptSimplePasses(2, 3));
             // Use yield to skip a frame.
             yield return null;
         
