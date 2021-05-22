@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Zerg : Commander
 {
-    private static List<Unit> myUnits;
-    public static List<Unit> MyUnits
+    private List<Unit> myUnits;
+    public List<Unit> MyUnits
 
     {
         get

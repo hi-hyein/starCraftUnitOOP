@@ -4,5 +4,10 @@ using UnityEngine;
 
 public abstract class Unit
 {
+    bool selected = false;
 
+    public void SelectMyself()
+    {
+        selected = true;
+    }
 }
