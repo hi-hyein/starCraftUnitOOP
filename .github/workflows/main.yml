@@ -33,8 +33,6 @@ jobs:
       # Test
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
-        with:
-          testMode: EditMode
 
       # Build
       # - name: Build project
