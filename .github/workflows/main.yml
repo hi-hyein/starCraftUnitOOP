@@ -16,6 +16,11 @@ jobs:
   test:
     name: Test my project ✨
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        projectPath:
+          - ./
     steps:
       - name: Create artifact dir
         run: |
@@ -28,12 +33,21 @@ jobs:
       # Cache
       - uses: actions/cache@v1.1.0
         with:
-          path: Library
-          key: Library
+          path: ${{ matrix.projectPath }}/Library
+          key: Library-${{ matrix.projectPath }}
+          restore-keys: |
+            Library-${{ matrix.projectPath }}-
+            Library-
       # Test
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
-
+        with:
+          projectPath: ${{ matrix.projectPath }}
+      # Result
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Test results (all modes)
+          path: ${{ steps.testRunner.outputs.artifactsPath }}
       # Build
       # - name: Build project
         # uses: game-ci/unity-builder@v2
