@@ -1,12 +1,6 @@
 name: Actions 😎
 
-on:
-  push:
-    branches:
-    - master
-  pull_request:
-    branches:
-    - master
+on: pull_request
     
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -17,6 +11,9 @@ jobs:
     name: Test my project ✨
     runs-on: ubuntu-latest
     steps:
+      - name: Create artifact dir
+        run: |
+            mkdir -p artifacts
       # Checkout
       - uses: actions/checkout@v2
         with:
@@ -33,6 +30,8 @@ jobs:
       # Test
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
+        with:
+          unityVersion: 2019.4.21f1
 
       # Build
       # - name: Build project
