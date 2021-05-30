@@ -29,15 +29,10 @@ jobs:
       - uses: actions/cache@v1.1.0
         with:
           path: Library
-          key: Library-$
-          restore-keys: |
-            Library-
-            
+          key: Library
       # Test
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
-        with:
-          unityVersion: 2019.4.21f1
 
       # Build
       # - name: Build project
