@@ -29,16 +29,22 @@
 ## 2. 현재 좌표
 - 유닛이 현재 있는 위치 좌표 
 - default: 0, 0, 0
+## 3. 선택되었는가
+- 커맨더가 유닛을 선택하면 유닛의 selected상태 변경
+- 유닛이 선택되었는지 안되었는지 상태 체크
+- 선택된 유닛이 다시 마우스 입력을 받으면 선택 해제
 ## Method
 ### 1. 현재 좌표 갱신(변경된 좌표)
 - 책임 : 현재 좌표 갱신
 - 현재 좌표 = 변경된 좌표
 ### 2. 이동(Commander가 명령한 좌표)
-책임 : 입력받은 좌표로 이동
-
+- 책임 : 입력받은 좌표로 이동
 - transform.position = Vector3.MoveTowards(trnasform.position += Commander가 명령한 좌표 * 속도 * Time.deltaTime)
 - 현재 좌표 갱신(Commander가 명령한 좌표)
-
+### 3. 선택 상태 변경
+- 책임 : 유닛 선택 상태 변경
+- 선택된 유닛이 다시 마우스 입력을 받으면 선택 해제
+- 
 # Lavar : Unit
 # Drone : Unit
 # Building
