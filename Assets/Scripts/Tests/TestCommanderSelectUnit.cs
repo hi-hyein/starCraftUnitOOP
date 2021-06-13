@@ -12,6 +12,13 @@ namespace Tests
         public void TestSelectUnit()
         {
             Zerg zerg = new Zerg();
+            Lavar lavar = new Lavar();
+            zerg.AddUnit(lavar, zerg.MyUnits);
+            Unit testAddUnit = zerg.MyUnits[0];
+            Assert.AreEqual(lavar, testAddUnit);
+            Assert.AreEqual(false, testAddUnit.Selected);
+            zerg.SelectUnit(testAddUnit);
+            Assert.AreEqual(true, testAddUnit.Selected);
         }
     }
 }
