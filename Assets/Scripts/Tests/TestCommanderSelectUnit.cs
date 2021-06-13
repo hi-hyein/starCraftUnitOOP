@@ -20,5 +20,18 @@ namespace Tests
             zerg.SelectUnit(testAddUnit);
             Assert.AreEqual(true, testAddUnit.Selected);
         }
+
+        [Test]
+        public void TestSelectUnitGroup()
+        {
+            // 같은 타입의 유닛들만 선택
+        }
+
+        [Test]
+        public void TestSelectUnitAll()
+        {
+            // 모든 유닛 선택
+        }
+
     }
 }
