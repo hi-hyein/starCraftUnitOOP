@@ -4,10 +4,26 @@ using UnityEngine;
 
 public abstract class Unit
 {
-    bool selected = false;
+    private bool selected = false;
+    public bool Selected
+    {
+        get
+        {
+            return selected;
+        }
+
+        set
+        {
+            selected = value;
+        }
+    }
 
     public void SelectMyself()
     {
         selected = true;
+    }
+    public void DeSelectMyself()
+    {
+        selected = false;
     }
 }
