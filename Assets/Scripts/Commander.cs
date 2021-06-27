@@ -4,9 +4,24 @@ using UnityEngine;
 
 public class Commander
 {
-    public void AddUnit(Unit unit, List<Unit> myUnits)
+    private List<Unit> myUnits;
+    public List<Unit> MyUnits
+
     {
-        myUnits.Add(unit);
+        get
+        {
+            return myUnits;
+        }
+
+        set
+        {
+            myUnits = value;
+        }
+
+    }
+    public void AddUnit(Unit unit)
+    {
+        MyUnits.Add(unit);
     }
 
     public void SelectUnit(Unit unit)
