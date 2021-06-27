@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lavar : Unit
+public class Drone : Unit
 {
-    public Lavar()
+    public Drone()
     {
-        Name = "LAVAR";
+        Name = "DRONE";
     }
 }
