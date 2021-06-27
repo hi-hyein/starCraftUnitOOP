@@ -24,6 +24,11 @@ public class Commander
         MyUnits.Add(unit);
     }
 
+    public List<Unit> GetUnits(Unit unit)
+    {
+      return MyUnits.FindAll(x => x.GetType() == unit.GetType());
+    }
+
     public void SelectUnit(Unit unit)
     {
         unit.Selected = true;
