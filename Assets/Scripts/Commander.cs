@@ -37,4 +37,19 @@ public class Commander
     {
         unit.Selected = false;
     }
+
+    public void SelectUnit(List<Unit> units)
+    {
+        foreach (var unit in units)
+        {
+            unit.Selected = true;
+        }
+    }
+    public void DeSelectUnit(List<Unit> units)
+    {
+        foreach (var unit in units)
+        {
+            unit.Selected = false;
+        }
+    }
 }
