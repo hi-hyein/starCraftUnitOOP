@@ -18,12 +18,4 @@ public abstract class Unit
         }
     }
 
-    public void SelectMyself()
-    {
-        selected = true;
-    }
-    public void DeSelectMyself()
-    {
-        selected = false;
-    }
 }
