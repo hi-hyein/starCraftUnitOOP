@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
@@ -63,8 +63,23 @@ namespace Tests
         [Test]
         public void TestSelectUnitAll()
         {
-            // 모든 유닛 선택
-        }
+            Zerg zerg3 = new Zerg();
 
+            // zerg 유닛 100마리씩 만들기
+            for (int i = 0; i < 100; i++)
+            {
+                zerg3.AddUnit(new Lavar());
+                zerg3.AddUnit(new Drone());
+            }
+
+            // 모든 유닛들 선택하기
+            zerg3.SelectUnit(zerg3.MyUnits);
+
+            // 모든 유닛들의 선택된 상태가 true면 성공
+            foreach (var zergUnit in zerg3.MyUnits)
+            {
+                Assert.AreEqual(true, zergUnit.Selected);
+            }
+        }
     }
 }
