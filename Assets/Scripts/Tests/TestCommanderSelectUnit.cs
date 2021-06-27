@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
@@ -12,13 +12,19 @@ namespace Tests
         public void TestSelectUnit()
         {
             Zerg zerg = new Zerg();
-            Lavar lavar = new Lavar();
-            zerg.AddUnit(lavar, zerg.MyUnits);
-            Unit testAddUnit = zerg.MyUnits[0];
-            Assert.AreEqual(lavar, testAddUnit);
-            Assert.AreEqual(false, testAddUnit.Selected);
-            zerg.SelectUnit(testAddUnit);
-            Assert.AreEqual(true, testAddUnit.Selected);
+            // zerg 유닛 만들기
+            zerg.AddUnit(new Lavar());
+            zerg.AddUnit(new Drone());
+
+            // 라바 한마리 가져오기
+            Unit testUnit = zerg.GetUnits("LAVAR")[0];
+
+            // 라바 한마리 선택하기
+            zerg.SelectUnit(testUnit);
+
+            // 라바 한마리 선택된 상태가 true면 성공
+            Assert.AreEqual(true, testUnit.Selected);
+
         }
 
         [Test]
