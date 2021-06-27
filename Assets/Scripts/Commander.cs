@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,9 +24,9 @@ public class Commander
         MyUnits.Add(unit);
     }
 
-    public List<Unit> GetUnits(Unit unit)
+    public List<Unit> GetUnits(string unitName)
     {
-      return MyUnits.FindAll(x => x.GetType() == unit.GetType());
+      return MyUnits.FindAll(x => x.Name == unitName);
     }
 
     public void SelectUnit(Unit unit)
