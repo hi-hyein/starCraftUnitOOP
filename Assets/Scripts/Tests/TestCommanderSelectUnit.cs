@@ -30,7 +30,34 @@ namespace Tests
         [Test]
         public void TestSelectUnitGroup()
         {
-            // 같은 타입의 유닛들만 선택
+             Zerg zerg2 = new Zerg();
+
+            // zerg 유닛 100마리씩 만들기
+            for (int i = 0; i < 100; i++)
+            {
+                zerg2.AddUnit(new Lavar());
+                zerg2.AddUnit(new Drone());
+            }
+
+            // zerg가 가지고 있는 모든 드론, 라바 각각 변수에 가져오기
+            List<Unit> testDroneUnits = zerg2.GetUnits("DRONE");
+            List<Unit> testLavarUnits = zerg2.GetUnits("LAVAR");
+
+            // 모든 드론들 선택하기
+            zerg2.SelectUnit(testDroneUnits);
+
+            // 모든 드론들의 선택된 상태가 true면 성공
+            foreach (var drone in testDroneUnits)
+            {
+                Assert.AreEqual(true, drone.Selected);
+            }
+
+            // 모든 라바들의 선택된 상태가 false면 성공
+            foreach (var labar in testLavarUnits)
+            {
+                Assert.AreEqual(false, labar.Selected);
+            }
+
         }
 
         [Test]
