@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zerg : Commander
+public class Drone : Unit
 {
-    public Zerg()
-	{
-		MyUnits = new List<Unit>();
-	}
+    public Drone()
+    {
+        Name = "DRONE";
+    }
 }
